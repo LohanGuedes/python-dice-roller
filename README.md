@@ -22,7 +22,7 @@ That's a example of how to use the dice roller, but you have other options, like
 * Log
 
 ## Modfiers:
-
+**TODO**
 For using Modfiers you just need to type the dices and following with a "," you desired modfier, here's
 a example on how it works, and a quick example on Multiple Rools:
 
@@ -35,7 +35,7 @@ $ 3d100+3: 130 55 86 #Original rolls: 100 25 56
 ```
 
 ## Log
-
+**TODO**
 You can see a log about all the rolls you did. For that you have two option:
 
 1. See the log on the app itself
