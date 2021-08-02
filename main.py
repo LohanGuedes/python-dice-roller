@@ -36,19 +36,24 @@ def main():
         
 def rolldice(dice):
     rolled_dices = []
-    splited = dice.split('+')
-    mod = splited[-1]
-    just_dice = splited[0]
-    just_splited = just_dice.split('d')
+    if '+' in dice:
+        splited = dice.split('+')
+        mod = splited[-1]
+        just_dice = splited[0]
+        just_splited = just_dice.split('d')
+    else:
+        mod = 0
+        just_splited = dice.split('d')
+        pass 
 
-    num_dices = just_splited[0]
-    num_faces = just_splited[1]
+    num_dices = int(just_splited[0])
+    num_faces = int(just_splited[1])
    
     i = 0
     while i < int(num_dices):
-        rolled_dices.append(random.randint(1, num_faces)+ int(mod))
+        rolled_dices.append(random.randint(1, num_faces))
         i += 1       
-
+    print(rolled_dices)
     return rolled_dices
 
 if __name__ == "__main__":
