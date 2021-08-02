@@ -22,7 +22,7 @@ That's a example of how to use the dice roller, but you have other options, like
 * Log
 
 ## Modfiers:
-**TODO**
+
 For using Modfiers you just need to type the dices and following with a "," you desired modfier, here's
 a example on how it works, and a quick example on Multiple Rools:
 
