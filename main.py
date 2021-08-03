@@ -11,7 +11,6 @@ def main():
     #User Variables:
     splited_inp = []
 
-
     gameover = False
     stillplay = None
     # mainloop
@@ -19,26 +18,27 @@ def main():
         num_plays = 0
         print("Enter the dices you want to roll!")
         splited_inp = input().split()
-        print(splited_inp)
-        for dice in splited_inp:
-            rolldice(dice)
+        for user_Inp in splited_inp:
+            print(user_Inp, rolldice(user_Inp))
 
 
         stillplay = input("Do you want to roll the dice again? [Y/n] ")
         if stillplay == 'n' or stillplay == 'N':
             gameover = True
+        if stillplay == 'y' or stillplay == 'Y':
+            gameover = False
             pass
-        
+            
+        # Quit Game
         if gameover == True:
             break
-        
             
         
 def rolldice(dice):
     rolled_dices = []
     if '+' in dice:
         splited = dice.split('+')
-        mod = splited[-1]
+        mod = int(splited[-1])
         just_dice = splited[0]
         just_splited = just_dice.split('d')
     else:
@@ -51,9 +51,8 @@ def rolldice(dice):
    
     i = 0
     while i < int(num_dices):
-        rolled_dices.append(random.randint(1, num_faces))
+        rolled_dices.append(random.randint(1, num_faces) + mod)
         i += 1       
-    print(rolled_dices)
     return rolled_dices
 
 if __name__ == "__main__":
