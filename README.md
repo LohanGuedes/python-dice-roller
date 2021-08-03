@@ -28,9 +28,9 @@ a example on how it works, and a quick example on Multiple Rools:
 
 ```
 $ Enter the dices you want to roll!
-$ 1d20,2 3d100,30
+$ 1d20-2 3d100+30
 $ you runned:
-$ 1d20+3: 18 #The original roll was 15
+$ 1d20-2: 12 #The original roll was 15
 $ 3d100+3: 130 55 86 #Original rolls: 100 25 56
 ```
 
