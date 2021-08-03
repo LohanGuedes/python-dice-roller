@@ -68,7 +68,7 @@ def rolldice(dice):
             i += 1       
         return rolled_dices
     except:
-        return f"Sorry, This input was not expected. Jumping to the next one. For help type: h"
+        return "Sorry, This input was not expected. Jumping to the next one. For help type: h"
 
 if __name__ == "__main__":
     main()
