@@ -41,6 +41,11 @@ def rolldice(dice):
         mod = int(splited[-1])
         just_dice = splited[0]
         just_splited = just_dice.split('d')
+    if '-' in dice:
+        splited = dice.split('-')
+        mod = -int(splited[-1])
+        just_dice = splited[0]
+        just_splited = just_dice.split('d')
     else:
         mod = 0
         just_splited = dice.split('d')
