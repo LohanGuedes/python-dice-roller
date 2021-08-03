@@ -9,11 +9,13 @@ def main():
     print("Python RPG-DiceRoller")
     print("Welcome Player!")
     print("For help on the usag type h or H")
-    #User Variables:
+    # User Variables:
     splited_inp = []
 
+    # Game state Variables
     gameover = False
     stillplay = None
+    num_plays = 0
     # mainloop
     while(True):
         print("Enter the dices you want to roll!")
@@ -26,6 +28,7 @@ def main():
             print("You runned: ")
             for user_Inp in splited_inp:
                 print(user_Inp + ':', rolldice(user_Inp))
+            num_plays += 1
             stillplay = input("Do you want to roll again? [Y/n] ")
             pass
 
@@ -39,17 +42,16 @@ def main():
         # Quit Game
         if gameover == True:
             break
-            
-        
+
 def rolldice(dice):
     rolled_dices = []
     try:
         if '+' in dice:
             splited = dice.split('+')
-            mod = int(splited[-1])
+            mod = +int(splited[-1])
             just_dice = splited[0]
             just_splited = just_dice.split('d')
-        if '-' in dice:
+        elif '-' in dice:
             splited = dice.split('-')
             mod = -int(splited[-1])
             just_dice = splited[0]
@@ -70,6 +72,19 @@ def rolldice(dice):
     except:
         return "Sorry, This input was not expected. Jumping to the next one. For help type: h"
 
+# def wish_to_log(stdvar):
+#     wsh = input("Do you want to store or print the log [n/Y]")
+#     if wsh == 'y' or wsh == 'Y':
+#         print('1. Store the log into a file')
+#         print('2. Print the Log here.')
+#         option = input('Chose your option:  ') 
+#         if option == 2:
+#             print(stdvar)
+#     else:
+#         pass
+    
+
 if __name__ == "__main__":
     main()
+    # wish_to_log(result_string)
     pass
