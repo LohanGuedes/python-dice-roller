@@ -6,9 +6,10 @@ import random
 
 def main():
     # Welcome user
-    print("Python RPG-DiceRoller")
-    print("Welcome Player!")
-    print("For help on the usag type h or H")
+    log_and_print("Python RPG-DiceRoller")
+    log_and_print("Welcome Player!")
+    log_and_print("For help on the usag type h or H")
+    
     # User Variables:
     splited_inp = []
 
@@ -16,21 +17,20 @@ def main():
     gameover = False
     stillplay = None
     num_plays = 0
+
     # mainloop
     while(True):
-        print("Enter the dices you want to roll!")
+        log_and_print("Enter the dices you want to roll!")
         splited_inp = input().split()
 
         if splited_inp == 'h' or splited_inp == 'H':
-            print('HELP!')
-            pass
+            log_and_print('HELP!')
         if splited_inp:
             print("You runned: ")
             for user_Inp in splited_inp:
-                print(user_Inp + ':', rolldice(user_Inp))
+                log_and_print(f"{user_Inp}: {rolldice(user_Inp)}")
             num_plays += 1
-            stillplay = input("Do you want to roll again? [Y/n] ")
-            pass
+            stillplay = log_and_input("Do you want to roll again? [Y/n] ")
 
 
         # Game State
@@ -38,11 +38,25 @@ def main():
             gameover = True
         if stillplay == 'y' or stillplay == 'Y':
             gameover = False
-            pass
         # Quit Game
         if gameover == True:
             break
+            
+## Log Functions
+def log(text: str, logfile: str="mylog.txt"):
+    with open(logfile, "a") as f:
+        f.write(text)
 
+def log_and_print(text: str):
+    print(text)
+    log(f"{text} \n")
+
+def log_and_input(prompt: str):
+    i = input(prompt)
+    log(f"{prompt}: {i} \n")
+    return i
+
+# Game dice roller
 def rolldice(dice):
     rolled_dices = []
     try:
@@ -59,7 +73,6 @@ def rolldice(dice):
         else:
             mod = 0
             just_splited = dice.split('d')
-            pass 
 
         num_dices = int(just_splited[0])
         num_faces = int(just_splited[1])
@@ -72,8 +85,5 @@ def rolldice(dice):
     except:
         return "Sorry, This input was not expected. Jumping to the next one. For help type: h"
 
-
 if __name__ == "__main__":
     main()
-    # wish_to_log(result_string)
-    pass
