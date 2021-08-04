@@ -10,8 +10,9 @@ you just need to run `5d100` that work for "unconventional" dices, like the d13,
 
 ```
 #This help message will only show on the first time running.
+$ For help and manual instructions, type: "h" 
 $ Enter the dices you want to roll!
-$ For help and manual instructions, type: "h" $ 1d20
+$ 1d20
 $ You runned:
 $ 1d20: 3
 ```
@@ -30,8 +31,8 @@ a example on how it works, and a quick example on Multiple Rools:
 $ Enter the dices you want to roll!
 $ 1d20-2 3d100+30
 $ you runned:
-$ 1d20-2: 12 #The original roll was 15
-$ 3d100+3: 130 55 86 #Original rolls: 100 25 56
+$ 1d20-2: 12 #The original roll was 14
+$ 3d100+30: 130 55 86 #Original rolls: 100 25 56
 ```
 
 ## Log

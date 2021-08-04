@@ -72,17 +72,6 @@ def rolldice(dice):
     except:
         return "Sorry, This input was not expected. Jumping to the next one. For help type: h"
 
-# def wish_to_log(stdvar):
-#     wsh = input("Do you want to store or print the log [n/Y]")
-#     if wsh == 'y' or wsh == 'Y':
-#         print('1. Store the log into a file')
-#         print('2. Print the Log here.')
-#         option = input('Chose your option:  ') 
-#         if option == 2:
-#             print(stdvar)
-#     else:
-#         pass
-    
 
 if __name__ == "__main__":
     main()
