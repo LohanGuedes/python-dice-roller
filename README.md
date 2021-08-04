@@ -36,24 +36,10 @@ $ 3d100+30: 130 55 86 #Original rolls: 100 25 56
 ```
 
 ## Log
-**TODO**
-You can see a log about all the rolls you did. For that you have two option:
 
-1. See the log on the app itself
-2. Send it to a logfile
-
-Let's see it should be used:
-
-```
-$ Enter the dices you want to roll!
-$ log
-$ Enter a option:
-$ 1. Print the log here.
-$ 2. Send the log to a file.
-$ Enter the option: 2.
-$ Name the file (No extensions please.): log1
-$ Created log1.txt
-```
+The log will be send to a file called `mylog.txt` all the output of the program will be stored inside that file
+and everytime that you run the program, a new log will be appended to that file. If the file does not exist, it'll
+be created on the run.
 
 ## Instalation tutorial:
 
