@@ -9,8 +9,6 @@ Example: `1d20` *this will roll one dice of 20sides.*, if you want to roll 5 dic
 you just need to run `5d100` that work for "unconventional" dices, like the d13, d9, d5, and so on.
 
 ```
-#This help message will only show on the first time running.
-$ For help and manual instructions, type: "h" 
 $ Enter the dices you want to roll!
 $ 1d20
 $ You runned:
@@ -40,7 +38,3 @@ $ 3d100+30: 130 55 86 #Original rolls: 100 25 56
 The log will be send to a file called `mylog.txt` all the output of the program will be stored inside that file
 and everytime that you run the program, a new log will be appended to that file. If the file does not exist, it'll
 be created on the run.
-
-## Instalation tutorial:
-
-**TODO** 
