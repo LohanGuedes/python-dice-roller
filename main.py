@@ -8,7 +8,6 @@ def main():
     # Welcome user
     log_and_print("Python RPG-DiceRoller")
     log_and_print("Welcome Player!")
-    log_and_print("For help on the usag type h or H")
     
     # User Variables:
     splited_inp = []
