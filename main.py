@@ -1,5 +1,4 @@
 # Python RPG-DiceRoller
-# ver 0.1
 # By LohanGuedes
 
 import random
@@ -20,22 +19,22 @@ def main():
     # mainloop
     while(True):
         log_and_print("Enter the dices you want to roll!")
-        splited_inp = input().split()
+        split_inp = input().split()
 
-        if splited_inp == 'h' or splited_inp == 'H':
+        if split_inp == 'h' or split_inp == 'H':
             log_and_print('HELP!')
-        if splited_inp:
-            print("You runned: ")
-            for user_Inp in splited_inp:
+        if split_inp:
+            print("You rolled: ")
+            for user_Inp in split_inp:
                 log_and_print(f"{user_Inp}: {rolldice(user_Inp)}")
             num_plays += 1
             stillplay = log_and_input("Do you want to roll again? [Y/n] ")
 
 
         # Game State
-        if stillplay == 'n' or stillplay == 'N':
+        if stillplay.upper() == 'N':
             gameover = True
-        if stillplay == 'y' or stillplay == 'Y':
+        if stillplay.upper() == 'Y':
             gameover = False
         # Quit Game
         if gameover == True:
@@ -82,7 +81,7 @@ def rolldice(dice):
             i += 1       
         return rolled_dices
     except:
-        return "Sorry, This input was not expected. Jumping to the next one. For help type: h"
+        return "Sorry, This input was not expected. Jumping to the next one"
 
 if __name__ == "__main__":
     main()
